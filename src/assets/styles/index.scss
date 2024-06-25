@@ -1,13 +1,3 @@
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-}
-
-html,
-body,
-#root {
-  min-height: 100vh;
-  width: 100%;
-}
+@use 'base/colors';
+@use 'base/fonts';
+@use 'base/global';
