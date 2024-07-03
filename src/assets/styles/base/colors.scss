@@ -1,0 +1,47 @@
+@use 'sass:color';
+
+$rose: #BF404B;
+$iris: #664DB2;
+$linen: #E7E4E4;
+
+$color: (
+  main: (
+    iris: $iris,
+    linen: $linen,
+    rose: $rose,
+  ),
+
+  iris: (
+    10: color.change($iris, $lightness: 99.75%),
+  ),
+
+  linen: (
+    10: color.change($linen, $lightness: 99.75%),
+  ),
+
+  rose: (
+    10: color.change($rose, $lightness: 99.75%),
+  ),
+);
+
+/*
+  color accessor function
+*/
+
+@function color($keys...) {
+  $value: $color;
+
+  @if length($keys) == 1 and (
+    nth($keys, 1) == iris or
+    nth($keys, 1) == linen or
+    nth($keys, 1) == rose
+  ) {
+    @return color(main, nth($keys, 1));
+  }
+
+  @each $key in $keys {
+    $value: map-get($value, $key);
+  }
+
+  @return $value;
+}

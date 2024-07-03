@@ -1,10 +1,21 @@
-import { Page } from '../../layouts'
+import {
+  Page,
+  PageContent,
+} from '../../layouts'
 import './ColorPage.scss'
 
 const ColorPage = () => {
   return (
     <Page className='color'>
-      <h1 className='title'>color.</h1>
+      <PageContent>
+        <h1 className='title'>color.</h1>
+
+        <div className='swatches strip'>
+          <div className='swatch rose'></div>
+          <div className='swatch iris'></div>
+          <div className='swatch linen'></div>
+        </div>
+      </PageContent>
     </Page>
   )
 }

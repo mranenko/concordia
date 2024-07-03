@@ -6,7 +6,7 @@ const DashboardPage = () => {
   return (
     <Page className='dashboard'>
       <h1 className='title'>welcome.</h1>
-      <div className='flex-row gap-1'>
+      <div className='flex-row gap-1 mt-1'>
         <NavLink to='/color'>color</NavLink> •
         <NavLink to='/typography'>typography</NavLink>
       </div>
