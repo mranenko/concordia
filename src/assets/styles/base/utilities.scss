@@ -1,0 +1,8 @@
+.flex { display: flex !important; }
+.flex-column { @extend .flex; flex-direction: column !important; }
+.flex-row { @extend .flex; flex-direction: row !important; }
+
+.gap-1 { gap: 1rem !important; }
+.gap-2 { gap: 2rem !important; }
+
+.w-full { width: 100% !important; }

@@ -16,6 +16,12 @@ html {
   font: 400 16px/1.5 sans-serif;
 }
 
+a {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+
 h1, h2, h3, h4, h5, h6, .title, .subtitle {
   font-family: 'Playfair Display', serif;
   font-weight: 600;
