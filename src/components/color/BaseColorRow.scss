@@ -1,0 +1,16 @@
+.swatch-row.base {
+  height: 15rem;
+  margin: 0;
+}
+
+.swatch {
+  border: 1px solid var(--color-linen-20);
+
+  $colors: 'linen', 'rose';
+
+  @each $color in $colors {
+    &.#{$color} {
+      background: var(--color-#{$color});
+    }
+  }
+}

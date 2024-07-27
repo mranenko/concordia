@@ -17,6 +17,10 @@ html {
   font: 400 16px/1.5 sans-serif;
 }
 
+body {
+  font-family: 'Asap', sans-serif;
+}
+
 a {
   color: inherit;
   cursor: pointer;
@@ -24,12 +28,16 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6, .title, .subtitle {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   line-height: 1.125;
 }
 
-h1 {
-  font-size: 3rem;
-  text-transform: lowercase;
+h1,
+h1.display,
+h1.title {
+  font-size: 4.5rem;
+  font-weight: 200;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }

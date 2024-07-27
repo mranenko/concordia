@@ -1,26 +1,62 @@
 @use 'sass:color';
 
-$rose: #BF404B;
-$iris: #664DB2;
-$linen: #E7E4E4;
+/*
+  base colors
+*/
+
+$linen: hsl(345, 9%, 90%);      // #E8E3E4
+$rose: hsl(345, 45%, 40%);      // #94384F
+
+/*
+  color lightness scale:
+  10    99 (foreground - dark theme)
+  20    95 (background - light theme)
+  30    90
+  40    84 (border - light theme)
+  50    75 (primary - dark theme)
+  60    66
+  70    53
+  80    40 (primary - light theme)
+  90    32 (border - dark theme)
+  200   25
+  110   20 (background - dark theme)
+  120   16 (foreground - light theme)
+*/
 
 $color: (
   main: (
-    iris: $iris,
     linen: $linen,
     rose: $rose,
   ),
 
-  iris: (
-    10: color.change($iris, $lightness: 99.75%),
-  ),
-
   linen: (
-    10: color.change($linen, $lightness: 99.75%),
+    10: color.change($linen, $lightness: 99%),
+    20: color.change($linen, $lightness: 95%),
+    30: color.change($linen, $lightness: 90%),
+    40: color.change($linen, $lightness: 84%),
+    50: color.change($linen, $lightness: 75%),
+    60: color.change($linen, $lightness: 66%),
+    70: color.change($linen, $lightness: 53%),
+    80: color.change($linen, $lightness: 40%),
+    90: color.change($linen, $lightness: 32%),
+    100: color.change($linen, $lightness: 25%),
+    110: color.change($linen, $lightness: 20%),
+    120: color.change($linen, $lightness: 16%),
   ),
 
   rose: (
-    10: color.change($rose, $lightness: 99.75%),
+    10: color.change($rose, $lightness: 99%),
+    20: color.change($rose, $lightness: 95%),
+    30: color.change($rose, $lightness: 90%),
+    40: color.change($rose, $lightness: 84%),
+    50: color.change($rose, $lightness: 75%),
+    60: color.change($rose, $lightness: 66%),
+    70: color.change($rose, $lightness: 53%),
+    80: color.change($rose, $lightness: 40%),
+    90: color.change($rose, $lightness: 32%),
+    100: color.change($rose, $lightness: 25%),
+    110: color.change($rose, $lightness: 20%),
+    120: color.change($rose, $lightness: 16%),
   ),
 );
 
@@ -32,7 +68,6 @@ $color: (
   $value: $color;
 
   @if length($keys) == 1 and (
-    nth($keys, 1) == iris or
     nth($keys, 1) == linen or
     nth($keys, 1) == rose
   ) {
@@ -44,4 +79,39 @@ $color: (
   }
 
   @return $value;
+}
+
+/*
+  primitive design tokens
+*/
+
+:root {
+  --color-linen: #{color(linen)};
+  --color-rose: #{color(rose)};
+
+  --color-linen-10: #{color(linen, 10)};
+  --color-linen-20: #{color(linen, 20)};
+  --color-linen-30: #{color(linen, 30)};
+  --color-linen-40: #{color(linen, 40)};
+  --color-linen-50: #{color(linen, 50)};
+  --color-linen-60: #{color(linen, 60)};
+  --color-linen-70: #{color(linen, 70)};
+  --color-linen-80: #{color(linen, 80)};
+  --color-linen-90: #{color(linen, 90)};
+  --color-linen-100: #{color(linen, 100)};
+  --color-linen-110: #{color(linen, 110)};
+  --color-linen-120: #{color(linen, 120)};
+
+  --color-rose-10: #{color(rose, 10)};
+  --color-rose-20: #{color(rose, 20)};
+  --color-rose-30: #{color(rose, 30)};
+  --color-rose-40: #{color(rose, 40)};
+  --color-rose-50: #{color(rose, 50)};
+  --color-rose-60: #{color(rose, 60)};
+  --color-rose-70: #{color(rose, 70)};
+  --color-rose-80: #{color(rose, 80)};
+  --color-rose-90: #{color(rose, 90)};
+  --color-rose-100: #{color(rose, 100)};
+  --color-rose-110: #{color(rose, 110)};
+  --color-rose-120: #{color(rose, 120)};
 }

@@ -1,15 +1,21 @@
-import { NavLink } from 'react-router-dom'
-import { Page } from '../../layouts'
-import './DashboardPage.scss'
+import {
+  BaseColorRow,
+  ColorRow,
+} from '../../components'
+import {
+  Page,
+  PageContent,
+} from '../../layouts'
 
 const DashboardPage = () => {
   return (
     <Page className='dashboard'>
-      <h1 className='title'>welcome.</h1>
-      <div className='flex-row gap-1 mt-1'>
-        <NavLink to='/color'>color</NavLink> •
-        <NavLink to='/typography'>typography</NavLink>
-      </div>
+      <PageContent>
+        <h1 className='title display'>Concordia</h1>
+      </PageContent>
+      <BaseColorRow />
+      <ColorRow color='rose' />
+      <ColorRow color='linen' />
     </Page>
   )
 }
