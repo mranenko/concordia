@@ -14,8 +14,8 @@ const DashboardPage = () => {
         <h1 className='title display'>Concordia</h1>
       </PageContent>
       <BaseColorRow />
-      <ColorRow color='rose' />
-      <ColorRow color='linen' />
+      <ColorRow color='primary' />
+      <ColorRow color='neutral' />
     </Page>
   )
 }

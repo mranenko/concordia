@@ -4,9 +4,7 @@
 }
 
 .swatch {
-  border: 1px solid var(--color-linen-20);
-
-  $colors: 'linen', 'rose';
+  $colors: 'neutral', 'primary';
 
   @each $color in $colors {
     &.#{$color} {

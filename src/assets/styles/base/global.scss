@@ -18,6 +18,8 @@ html {
 }
 
 body {
+  background: var(--color-background);
+  color: var(--color-foreground);
   font-family: 'Asap', sans-serif;
 }
 
@@ -36,8 +38,8 @@ h1, h2, h3, h4, h5, h6, .title, .subtitle {
 h1,
 h1.display,
 h1.title {
-  font-size: 4.5rem;
-  font-weight: 200;
-  letter-spacing: 2px;
+  font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: 4px;
   text-transform: uppercase;
 }

@@ -3,8 +3,8 @@ import './BaseColorRow.scss'
 const BaseColorRow = () => {
   return (
     <div className='swatch-row base'>
-      <div className='swatch rose'></div>
-      <div className='swatch linen'></div>
+      <div className='swatch primary'></div>
+      <div className='swatch neutral'></div>
     </div>
   )
 }

@@ -1,17 +1,19 @@
 .swatch-row {
+  background: var(--color-border);
   display: grid;
-  gap: -1px;
+  gap: 2px;
   grid-auto-columns: minmax(0, 1fr);
   grid-auto-flow: column;
-  height: 10rem;
-  margin: 2rem 0 0;
+  height: 8rem;
+  margin: 1.5rem 0 0;
+  padding: 2px 0;
   width: 100%;
 }
 
 .swatch {
-  border: 1px solid var(--color-linen-20);
+  // border: 1px solid var(--color-border);
 
-  $colors: 'linen', 'rose';
+  $colors: 'neutral', 'primary';
   $levels: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120;
 
   @each $color in $colors {
