@@ -15,6 +15,7 @@ const DashboardPage = () => {
       </PageContent>
       <BaseColorRow />
       <ColorRow color='primary' />
+      <ColorRow color='secondary' />
       <ColorRow color='neutral' />
     </Page>
   )

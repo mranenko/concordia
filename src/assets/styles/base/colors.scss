@@ -4,7 +4,8 @@
   base colors
 */
 
-$linen: hsl(345, 9%, 90%);      // #E8E3E4
+$linen: hsl(345, 9%, 84%);      // #E8E3E4
+$peach: hsl(15, 55%, 66%);      // #E98867
 $rose: hsl(345, 45%, 40%);      // #94384F
 
 /*
@@ -26,6 +27,7 @@ $rose: hsl(345, 45%, 40%);      // #94384F
 $color: (
   main: (
     linen: $linen,
+    peach: $peach,
     rose: $rose,
   ),
 
@@ -42,6 +44,21 @@ $color: (
     100: color.change($linen, $lightness: 25%),
     110: color.change($linen, $lightness: 20%),
     120: color.change($linen, $lightness: 16%),
+  ),
+
+  peach: (
+    10: color.change($peach, $lightness: 99%),
+    20: color.change($peach, $lightness: 95%),
+    30: color.change($peach, $lightness: 90%),
+    40: color.change($peach, $lightness: 84%),
+    50: color.change($peach, $lightness: 75%),
+    60: color.change($peach, $lightness: 66%),
+    70: color.change($peach, $lightness: 53%),
+    80: color.change($peach, $lightness: 40%),
+    90: color.change($peach, $lightness: 32%),
+    100: color.change($peach, $lightness: 25%),
+    110: color.change($peach, $lightness: 20%),
+    120: color.change($peach, $lightness: 16%),
   ),
 
   rose: (
@@ -69,6 +86,7 @@ $color: (
 
   @if length($keys) == 1 and (
     nth($keys, 1) == linen or
+    nth($keys, 1) == peach or
     nth($keys, 1) == rose
   ) {
     @return color(main, nth($keys, 1));
@@ -88,6 +106,7 @@ $color: (
 :root {
   --color-neutral: #{color(linen)};
   --color-primary: #{color(rose)};
+  --color-secondary: #{color(peach)};
 
   --color-neutral-10: #{color(linen, 10)};
   --color-neutral-20: #{color(linen, 20)};
@@ -114,6 +133,19 @@ $color: (
   --color-primary-100: #{color(rose, 100)};
   --color-primary-110: #{color(rose, 110)};
   --color-primary-120: #{color(rose, 120)};
+
+  --color-secondary-10: #{color(peach, 10)};
+  --color-secondary-20: #{color(peach, 20)};
+  --color-secondary-30: #{color(peach, 30)};
+  --color-secondary-40: #{color(peach, 40)};
+  --color-secondary-50: #{color(peach, 50)};
+  --color-secondary-60: #{color(peach, 60)};
+  --color-secondary-70: #{color(peach, 70)};
+  --color-secondary-80: #{color(peach, 80)};
+  --color-secondary-90: #{color(peach, 90)};
+  --color-secondary-100: #{color(peach, 100)};
+  --color-secondary-110: #{color(peach, 110)};
+  --color-secondary-120: #{color(peach, 120)};
 }
 
 /*
