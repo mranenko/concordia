@@ -1,17 +1,20 @@
 import {
   BaseColorRow,
   ColorRow,
-} from '../../components'
-import {
+  GridRow,
   Page,
   PageContent,
-} from '../../layouts'
+  ThemeExplorer,
+} from '../../components'
 
 const DashboardPage = () => {
   return (
     <Page className='dashboard'>
       <PageContent>
-        <h1 className='title display'>Concordia</h1>
+        <GridRow alignItems='center' gap={2} justifyContent='space-between'>
+          <h1 className='title display'>Concordia</h1>
+          <ThemeExplorer />
+        </GridRow>
       </PageContent>
       <BaseColorRow />
       <ColorRow color='primary' />

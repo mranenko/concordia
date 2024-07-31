@@ -1,0 +1,19 @@
+.drawer {
+  $-drawer-width: 15rem;
+
+  align-items: center;
+  background: var(--color-background-light);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem 1.5rem;
+  position: fixed;
+  right: -1*$-drawer-width;
+  top: 0;
+  transition: right .5s;
+  width: $-drawer-width;
+
+  &.active {
+    right: 0;
+  }
+}

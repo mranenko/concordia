@@ -21,12 +21,35 @@ body {
   background: var(--color-background);
   color: var(--color-foreground);
   font-family: 'Asap', sans-serif;
+  letter-spacing: .5px;
 }
 
 a {
   color: inherit;
   cursor: pointer;
   text-decoration: none;
+}
+
+button,
+.button {
+  align-items: center;
+  background: none;
+  color: inherit;
+  border: 1px solid currentColor;
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: row;
+  font: inherit;
+  font-weight: 500;
+  gap: .625rem;
+  letter-spacing: .5px;
+  padding: 1rem 1.5rem;
+  white-space: nowrap;
+
+  i {
+    display: flex;
+    font-size: 137.5%;
+  }
 }
 
 h1, h2, h3, h4, h5, h6, .title, .subtitle {
