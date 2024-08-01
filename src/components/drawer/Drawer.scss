@@ -1,5 +1,8 @@
+@use '../../assets/styles/base/breakpoints' as *;
+
 .drawer {
-  $-drawer-width: 15rem;
+  $-drawer-width: 100%;
+  --drawer-width: 100%;
 
   align-items: center;
   background: var(--color-background-light);
@@ -8,12 +11,26 @@
   min-height: 100vh;
   padding: 2rem 1.5rem;
   position: fixed;
-  right: -1*$-drawer-width;
+  right: calc(-1 * var(--drawer-width));
   top: 0;
   transition: right .5s;
-  width: $-drawer-width;
+  width: var(--drawer-width);
 
   &.active {
     right: 0;
+  }
+
+  .button-close {
+    font-size: 2rem;
+    left: 1.5rem;
+    position: absolute;
+    top: 1.5rem;
+  }
+}
+
+@include respond-to(small) {
+  .drawer {
+    $-drawer-width: 48rem;
+    --drawer-width: 48rem;
   }
 }

@@ -5,18 +5,18 @@ import { Drawer } from '../../components'
 
 const ThemeExplorer = () => {
   const [isThemeExplorerActive, setIsThemeExplorerActive] = useState(false)
-  const showThemeExplorer = () => {
+  const toggleThemeExplorer = () => {
     setIsThemeExplorerActive(!isThemeExplorerActive)
   }
 
   return (
     <>
-      <button className='button' onClick={showThemeExplorer}>
+      <button className='button' onClick={toggleThemeExplorer}>
         <i><Palette weight='bold' /></i>
         <span>Theme explorer</span>
       </button>
 
-      <Drawer active={isThemeExplorerActive}>
+      <Drawer active={isThemeExplorerActive} toggleActive={toggleThemeExplorer}>
         Under construction
       </Drawer>
     </>

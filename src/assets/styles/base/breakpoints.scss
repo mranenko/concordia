@@ -1,0 +1,14 @@
+$breakpoint-small: 50rem; /* 768px */
+$breakpoint-large: 80rem; /* 12800px */
+
+@mixin respond-to($media) {
+  @if $media == small {
+    @media (min-width: $breakpoint-small) { @content; }
+  }
+  @else if $media == large {
+    @media (min-width: $breakpoint-large) { @content; }
+  }
+  @else {
+    @media (min-width: $media) { @content; }
+  }
+}
