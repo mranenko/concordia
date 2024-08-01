@@ -1,17 +1,18 @@
 @use '../../assets/styles/base/breakpoints' as *;
+@use '../../assets/styles/base/colors' as *;
 
 .drawer {
-  $-drawer-width: 100%;
   --drawer-width: 100%;
 
   align-items: center;
   background: var(--color-background-light);
+  box-shadow: 0 0 .5rem .5rem rgba(color(neutral, 120), .5);
   display: flex;
   justify-content: center;
   min-height: 100vh;
   padding: 2rem 1.5rem;
   position: fixed;
-  right: calc(-1 * var(--drawer-width));
+  right: calc(-1 * var(--drawer-width) - 1rem);
   top: 0;
   transition: right .5s;
   width: var(--drawer-width);
@@ -30,7 +31,6 @@
 
 @include respond-to(small) {
   .drawer {
-    $-drawer-width: 48rem;
     --drawer-width: 48rem;
   }
 }
