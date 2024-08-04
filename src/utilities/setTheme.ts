@@ -2,7 +2,6 @@ import themes from '../assets/data/themes.json'
 
 const setColorVariable = (key: string, value: string) => {
   const [hue, saturation] = value.match(/\d+/g).map(Number)
-  console.log(`${key}: ${value}`)
   document.documentElement.style.setProperty(`--color-${key}`, value)
   document.documentElement.style.setProperty(`--color-${key}-10`, `hsl(${hue} ${saturation} 99)`)
   document.documentElement.style.setProperty(`--color-${key}-20`, `hsl(${hue} ${saturation} 95)`)
