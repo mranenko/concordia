@@ -1,0 +1,53 @@
+.theme {
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  min-width: 19.5rem;
+
+  &.affair {
+    .theme-color.primary { background: #664587; }
+    .theme-color.secondary { background: #BF86CB; }
+    .theme-color.neutral { background: #D6D3D9; }
+  }
+
+  &.calypso {
+    .theme-color.primary { background: #25647E; }
+    .theme-color.secondary { background: #57B764; }
+    .theme-color.neutral { background: #D3D8D9; }
+  }
+
+  &.camelot {
+    .theme-color.primary { background: #94384F; }
+    .theme-color.secondary { background: #D89078; }
+    .theme-color.neutral { background: #DAD3D3; }
+  }
+
+  &.plum {
+    .theme-color.primary { background: #8F3D7D; }
+    .theme-color.secondary { background: #448880; }
+    .theme-color.neutral { background: #DAD3D8; }
+  }
+}
+
+.theme-color-row {
+  display: grid;
+  grid-auto-columns: minmax(0, 1fr);
+  grid-auto-flow: column;
+  height: 4rem;
+}
+
+.theme-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 3rem;
+  width: 100%;
+}
+
+.theme-name {
+  overflow: hidden;
+  padding: .75rem 1rem;
+  text-align: center;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
