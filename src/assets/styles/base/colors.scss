@@ -4,9 +4,9 @@
   base colors
 */
 
-$linen: hsl(345, 9%, 84%);      // #E8E3E4
-$peach: hsl(15, 55%, 66%);      // #E98867
-$rose: hsl(345, 45%, 40%);      // #94384F
+$neutral: hsl(198, 8%, 84%);        // #D3D8D9
+$primary: hsl(198, 55%, 32%);       // #25647E
+$secondary: hsl(128, 40%, 53%);     // #57B764
 
 /*
   color lightness scale:
@@ -26,54 +26,54 @@ $rose: hsl(345, 45%, 40%);      // #94384F
 
 $color: (
   main: (
-    linen: $linen,
-    peach: $peach,
-    rose: $rose,
+    neutral: $neutral,
+    primary: $primary,
+    secondary: $secondary,
   ),
 
   neutral: (
-    10: color.change($linen, $lightness: 99%),
-    20: color.change($linen, $lightness: 95%),
-    30: color.change($linen, $lightness: 90%),
-    40: color.change($linen, $lightness: 84%),
-    50: color.change($linen, $lightness: 75%),
-    60: color.change($linen, $lightness: 66%),
-    70: color.change($linen, $lightness: 53%),
-    80: color.change($linen, $lightness: 40%),
-    90: color.change($linen, $lightness: 32%),
-    100: color.change($linen, $lightness: 25%),
-    110: color.change($linen, $lightness: 20%),
-    120: color.change($linen, $lightness: 16%),
+    10: color.change($neutral, $lightness: 99%),
+    20: color.change($neutral, $lightness: 95%),
+    30: color.change($neutral, $lightness: 90%),
+    40: color.change($neutral, $lightness: 84%),
+    50: color.change($neutral, $lightness: 75%),
+    60: color.change($neutral, $lightness: 66%),
+    70: color.change($neutral, $lightness: 53%),
+    80: color.change($neutral, $lightness: 40%),
+    90: color.change($neutral, $lightness: 32%),
+    100: color.change($neutral, $lightness: 25%),
+    110: color.change($neutral, $lightness: 20%),
+    120: color.change($neutral, $lightness: 16%),
   ),
 
-  peach: (
-    10: color.change($peach, $lightness: 99%),
-    20: color.change($peach, $lightness: 95%),
-    30: color.change($peach, $lightness: 90%),
-    40: color.change($peach, $lightness: 84%),
-    50: color.change($peach, $lightness: 75%),
-    60: color.change($peach, $lightness: 66%),
-    70: color.change($peach, $lightness: 53%),
-    80: color.change($peach, $lightness: 40%),
-    90: color.change($peach, $lightness: 32%),
-    100: color.change($peach, $lightness: 25%),
-    110: color.change($peach, $lightness: 20%),
-    120: color.change($peach, $lightness: 16%),
+  primary: (
+    10: color.change($primary, $lightness: 99%),
+    20: color.change($primary, $lightness: 95%),
+    30: color.change($primary, $lightness: 90%),
+    40: color.change($primary, $lightness: 84%),
+    50: color.change($primary, $lightness: 75%),
+    60: color.change($primary, $lightness: 66%),
+    70: color.change($primary, $lightness: 53%),
+    80: color.change($primary, $lightness: 40%),
+    90: color.change($primary, $lightness: 32%),
+    100: color.change($primary, $lightness: 25%),
+    110: color.change($primary, $lightness: 20%),
+    120: color.change($primary, $lightness: 16%),
   ),
 
-  rose: (
-    10: color.change($rose, $lightness: 99%),
-    20: color.change($rose, $lightness: 95%),
-    30: color.change($rose, $lightness: 90%),
-    40: color.change($rose, $lightness: 84%),
-    50: color.change($rose, $lightness: 75%),
-    60: color.change($rose, $lightness: 66%),
-    70: color.change($rose, $lightness: 53%),
-    80: color.change($rose, $lightness: 40%),
-    90: color.change($rose, $lightness: 32%),
-    100: color.change($rose, $lightness: 25%),
-    110: color.change($rose, $lightness: 20%),
-    120: color.change($rose, $lightness: 16%),
+  secondary: (
+    10: color.change($secondary, $lightness: 99%),
+    20: color.change($secondary, $lightness: 95%),
+    30: color.change($secondary, $lightness: 90%),
+    40: color.change($secondary, $lightness: 84%),
+    50: color.change($secondary, $lightness: 75%),
+    60: color.change($secondary, $lightness: 66%),
+    70: color.change($secondary, $lightness: 53%),
+    80: color.change($secondary, $lightness: 40%),
+    90: color.change($secondary, $lightness: 32%),
+    100: color.change($secondary, $lightness: 25%),
+    110: color.change($secondary, $lightness: 20%),
+    120: color.change($secondary, $lightness: 16%),
   ),
 );
 
@@ -85,9 +85,9 @@ $color: (
   $value: $color;
 
   @if length($keys) == 1 and (
-    nth($keys, 1) == linen or
-    nth($keys, 1) == peach or
-    nth($keys, 1) == rose
+    nth($keys, 1) == neutral or
+    nth($keys, 1) == primary or
+    nth($keys, 1) == secondary
   ) {
     @return color(main, nth($keys, 1));
   }
@@ -104,9 +104,9 @@ $color: (
 */
 
 :root {
-  --color-neutral: #{color(linen)};
-  --color-primary: #{color(rose)};
-  --color-secondary: #{color(peach)};
+  --color-neutral: #{color(neutral)};
+  --color-primary: #{color(primary)};
+  --color-secondary: #{color(secondary)};
 
   --color-neutral-10: #{color(neutral, 10)};
   --color-neutral-20: #{color(neutral, 20)};
@@ -121,31 +121,31 @@ $color: (
   --color-neutral-110: #{color(neutral, 110)};
   --color-neutral-120: #{color(neutral, 120)};
 
-  --color-primary-10: #{color(rose, 10)};
-  --color-primary-20: #{color(rose, 20)};
-  --color-primary-30: #{color(rose, 30)};
-  --color-primary-40: #{color(rose, 40)};
-  --color-primary-50: #{color(rose, 50)};
-  --color-primary-60: #{color(rose, 60)};
-  --color-primary-70: #{color(rose, 70)};
-  --color-primary-80: #{color(rose, 80)};
-  --color-primary-90: #{color(rose, 90)};
-  --color-primary-100: #{color(rose, 100)};
-  --color-primary-110: #{color(rose, 110)};
-  --color-primary-120: #{color(rose, 120)};
+  --color-primary-10: #{color(primary, 10)};
+  --color-primary-20: #{color(primary, 20)};
+  --color-primary-30: #{color(primary, 30)};
+  --color-primary-40: #{color(primary, 40)};
+  --color-primary-50: #{color(primary, 50)};
+  --color-primary-60: #{color(primary, 60)};
+  --color-primary-70: #{color(primary, 70)};
+  --color-primary-80: #{color(primary, 80)};
+  --color-primary-90: #{color(primary, 90)};
+  --color-primary-100: #{color(primary, 100)};
+  --color-primary-110: #{color(primary, 110)};
+  --color-primary-120: #{color(primary, 120)};
 
-  --color-secondary-10: #{color(peach, 10)};
-  --color-secondary-20: #{color(peach, 20)};
-  --color-secondary-30: #{color(peach, 30)};
-  --color-secondary-40: #{color(peach, 40)};
-  --color-secondary-50: #{color(peach, 50)};
-  --color-secondary-60: #{color(peach, 60)};
-  --color-secondary-70: #{color(peach, 70)};
-  --color-secondary-80: #{color(peach, 80)};
-  --color-secondary-90: #{color(peach, 90)};
-  --color-secondary-100: #{color(peach, 100)};
-  --color-secondary-110: #{color(peach, 110)};
-  --color-secondary-120: #{color(peach, 120)};
+  --color-secondary-10: #{color(secondary, 10)};
+  --color-secondary-20: #{color(secondary, 20)};
+  --color-secondary-30: #{color(secondary, 30)};
+  --color-secondary-40: #{color(secondary, 40)};
+  --color-secondary-50: #{color(secondary, 50)};
+  --color-secondary-60: #{color(secondary, 60)};
+  --color-secondary-70: #{color(secondary, 70)};
+  --color-secondary-80: #{color(secondary, 80)};
+  --color-secondary-90: #{color(secondary, 90)};
+  --color-secondary-100: #{color(secondary, 100)};
+  --color-secondary-110: #{color(secondary, 110)};
+  --color-secondary-120: #{color(secondary, 120)};
 }
 
 /*
