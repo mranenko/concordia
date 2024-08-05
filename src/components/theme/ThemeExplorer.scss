@@ -4,7 +4,7 @@
 .theme {
   border: 1px solid var(--color-border);
   cursor: pointer;
-  min-width: 19.5rem;
+  width: 100%;
 
   &.affair {
     .theme-color.primary { background: #664587; }
@@ -58,7 +58,7 @@
 
 .theme-name {
   overflow: hidden;
-  padding: .75rem 1rem;
+  padding: .5rem 1rem;
   text-align: center;
   text-overflow: ellipsis;
   text-transform: uppercase;
@@ -66,6 +66,10 @@
 }
 
 @include respond-to(medium) {
+  .theme {
+    max-width: 19.5rem;
+  }
+
   .theme-explorer-button {
     border-radius: 0;
     height: auto;

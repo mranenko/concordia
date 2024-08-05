@@ -8,11 +8,11 @@
   background: var(--color-background-light);
   box-shadow: 0 0 .5rem .5rem rgba(color(neutral, 120), .5);
   display: flex;
-  justify-content: center;
+  justify-content: stretch;
   min-height: 100vh;
   padding: 3rem;
   position: fixed;
-  right: calc(-2 * var(--drawer-width));
+  right: calc(-1 * var(--drawer-width) - 1rem);
   top: 0;
   transition: right .8s;
   width: var(--drawer-width);
@@ -29,8 +29,10 @@
   }
 }
 
-@include respond-to(small) {
+@include respond-to(medium) {
   .drawer {
     --drawer-width: 48rem;
+
+    justify-content: center;
   }
 }
