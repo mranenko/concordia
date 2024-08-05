@@ -1,7 +1,18 @@
-import themes from '../assets/data/themes.json'
+import themesJson from '../assets/data/themes.json'
 
-const setColorVariable = (key: string, value: string) => {
-  const [hue, saturation] = value.match(/\d+/g).map(Number)
+interface ITheme {
+  primary: string
+  secondary?: string
+  neutral: string
+}
+
+interface IThemes {
+  [key: string]: ITheme
+}
+
+const setColorVariable = (key: string, value: string = '') => {
+  const hsl = value.match(/\d+/g) || [0, 0, 0]
+  const [hue, saturation] = hsl.map(Number)
   document.documentElement.style.setProperty(`--color-${key}`, value)
   document.documentElement.style.setProperty(`--color-${key}-10`, `hsl(${hue} ${saturation} 99)`)
   document.documentElement.style.setProperty(`--color-${key}-20`, `hsl(${hue} ${saturation} 95)`)
@@ -18,7 +29,8 @@ const setColorVariable = (key: string, value: string) => {
 }
 
 const setTheme = (themeName: string) => {
-  const theme = themes[themeName]
+  const themes: IThemes = themesJson
+  const theme: ITheme = themes[themeName]
   setColorVariable('primary', theme.primary)
   setColorVariable('secondary', theme.secondary)
   setColorVariable('neutral', theme.neutral)

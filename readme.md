@@ -3,7 +3,7 @@
 
 # Concordia
 
-Design system tool.
+Color variants generator for a design system.
 
 ---
 
