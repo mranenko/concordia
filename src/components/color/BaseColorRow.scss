@@ -1,5 +1,7 @@
+@use '../../assets/styles/base/breakpoints.scss' as *;
+
 .swatch-row.base {
-  height: 15rem;
+  height: 8rem;
   margin: 0;
 }
 
@@ -11,4 +13,12 @@
       background: var(--color-#{$color});
     }
   }
+}
+
+@include respond-to(small) {
+  .swatch-row.base { height: 12rem; }
+}
+
+@include respond-to(large) {
+  .swatch-row.base { height: 16rem; }
 }

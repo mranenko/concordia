@@ -1,3 +1,6 @@
+@use '../../assets/styles/base/breakpoints.scss' as *;
+@use '../../assets/styles/base/global.scss' as *;
+
 .theme {
   border: 1px solid var(--color-border);
   cursor: pointer;
@@ -35,6 +38,16 @@
   height: 4rem;
 }
 
+.theme-explorer-button {
+  @extend .button;
+  align-self: end;
+  border-radius: 50%;
+  height: 3rem;
+  padding: 0;
+  width: 3rem;
+  span { display: none; }
+}
+
 .theme-grid {
   display: flex;
   flex-direction: row;
@@ -50,4 +63,14 @@
   text-overflow: ellipsis;
   text-transform: uppercase;
   white-space: nowrap;
+}
+
+@include respond-to(medium) {
+  .theme-explorer-button {
+    border-radius: 0;
+    height: auto;
+    padding: 1rem 1.5rem;
+    width: auto;
+    span { display: inline; }
+  }
 }

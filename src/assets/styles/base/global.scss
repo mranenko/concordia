@@ -42,6 +42,7 @@ button,
   font: inherit;
   font-weight: 500;
   gap: .625rem;
+  justify-content: center;
   letter-spacing: .5px;
   padding: 1rem 1.5rem;
   white-space: nowrap;
@@ -56,13 +57,4 @@ h1, h2, h3, h4, h5, h6, .title, .subtitle {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   line-height: 1.125;
-}
-
-h1,
-h1.display,
-h1.title {
-  font-size: 4rem;
-  font-weight: 400;
-  letter-spacing: 4px;
-  text-transform: uppercase;
 }

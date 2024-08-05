@@ -13,7 +13,7 @@ const ThemeExplorer = () => {
 
   return (
     <>
-      <button className='button' onClick={toggleThemeExplorer}>
+      <button className='theme-explorer-button' onClick={toggleThemeExplorer}>
         <i><Palette weight='bold' /></i>
         <span>Theme explorer</span>
       </button>

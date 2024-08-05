@@ -1,0 +1,36 @@
+@use '../../assets/styles/base/breakpoints.scss' as *;
+
+.dashboard-header {
+  align-items: center;
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dashboard-title {
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  word-break: break-all;
+}
+
+@include respond-to(small) {
+  .dashboard-header {
+    flex-direction: row-reverse;
+  justify-content: space-between;
+  }
+
+  .dashboard-title {
+    font-size: 3rem;
+    letter-spacing: 3px;
+  }
+}
+
+@include respond-to(medium) {
+  .dashboard-title {
+    font-size: 4rem;
+    letter-spacing: 4px;
+  }
+}

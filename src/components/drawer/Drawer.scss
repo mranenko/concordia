@@ -12,9 +12,9 @@
   min-height: 100vh;
   padding: 3rem;
   position: fixed;
-  right: calc(-1 * var(--drawer-width) - 1rem);
+  right: calc(-2 * var(--drawer-width));
   top: 0;
-  transition: right .5s;
+  transition: right .8s;
   width: var(--drawer-width);
 
   &.active {
