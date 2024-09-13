@@ -26,7 +26,7 @@ npm start
 
 Open your browser at [localhost:5309](http://localhost:5309)
 
-Note: This project uses node 22.5.1 and npm 10.8.2.
+Note: This project uses node 22.8.0 and npm 10.8.2.
 
 ---
 
