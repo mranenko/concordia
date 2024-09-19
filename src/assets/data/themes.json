@@ -5,9 +5,9 @@
     "neutral": "hsl(270 7 84)"
   },
   "calypso": {
-    "primary": "hsl(198 55 32)",
-    "secondary": "hsl(128 40 53)",
-    "neutral": "hsl(198 8 84)"
+    "primary": "hsl(200 60 30)",
+    "secondary": "hsl(110 50 57)",
+    "neutral": "hsl(215 9 84)"
   },
   "camelot": {
     "primary": "hsl(345 45 40)",
